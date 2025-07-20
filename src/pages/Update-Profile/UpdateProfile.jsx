@@ -22,7 +22,7 @@ const UpdateProfile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const res = await axios.get('http://localhost:5000/auth/me', {
+                const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/auth/me`, {
                     withCredentials: true,
                 });
                 setProfile({
@@ -53,7 +53,7 @@ const UpdateProfile = () => {
         e.preventDefault();
         setSaving(true);
         try {
-            await axios.put('http://localhost:5000/auth/profile', profile, {
+            await axios.put(`${import.meta.env.VITE_API_BASE_URL}/auth/profile`, profile, {
                 withCredentials: true,
             });
             navigate('/profile');
