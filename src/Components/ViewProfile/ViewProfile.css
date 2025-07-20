@@ -1,0 +1,55 @@
+.profile-page {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.profile-card {
+  background: white;
+  padding: 2rem;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem;
+  background-color: #6366f1;
+  color: white;
+  border-radius: 50%;
+  font-size: 2rem;
+  line-height: 80px;
+  font-weight: bold;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+.email {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.bio {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #444;
+}
+
+.dm-button {
+  margin-top: 1.5rem;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dm-button:hover {
+  background-color: #4f46e5;
+}
