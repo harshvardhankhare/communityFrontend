@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
+import AnswerSection from "../../Components/AnswerSection/AnswerSection";
 
 import {
   FaLightbulb,
@@ -217,10 +218,11 @@ const handleVote = async (id ,type) => {
               <span className="notification-badge">1</span>
             </div>
             <div className="user-avatar">
-              <img
+              <Link to={'/profile'}> <img
                 src="https://randomuser.me/api/portraits/men/32.jpg"
                 alt="User"
-              />
+              /></Link>
+              
             </div>
           </div>
         </nav>
@@ -517,10 +519,10 @@ const handleVote = async (id ,type) => {
                     <FaThumbsDown />
                     <span>{question.downvotes}</span>
                   </button>
-                  <button className="action-btn">
+                  {/* <button className="action-btn">
                     <FaComment />
                     <span>Comment</span>
-                  </button>
+                  </button> */}<AnswerSection questionId={question._id} />
                   <button className="action-btn">
                     <FaShare />
                     <span>Share</span>
