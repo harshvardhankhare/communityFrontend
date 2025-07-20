@@ -36,7 +36,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchCurrentUser = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/auth/me', {
+        const res = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/auth/me`, {
           withCredentials: true,
         });
         setCurrentUser(res.data);
@@ -79,7 +79,7 @@ const Profile = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:5000/auth/logout', {}, { withCredentials: true });
+      await axios.post(`${import.meta.env.VITE_API_BASE_URL}/auth/logout`, {}, { withCredentials: true });
       toast.success(" LogOut We Will Miss You")
       navigate('/');  // redirect to login or home
     } catch (err) {
