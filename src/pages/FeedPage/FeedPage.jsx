@@ -530,7 +530,7 @@ const handleVote = async (id ,type) => {
                 </div>
 
                 <div className="answer-count">
-                  <span>{question.answers}</span> answers
+                  <span></span> answers
                 </div>
               </div>
             </div>
